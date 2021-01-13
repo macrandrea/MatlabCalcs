@@ -1,3 +1,5 @@
+%matlab function that calculates a price in a specific experimental model
+
 function [y1,y2]=My_Prob(S0,K,sigma0,T,r,b,eta,Lambda,rho,phi)
 x = log(S0);
 lambda=(2*b)/sigma0^2;
