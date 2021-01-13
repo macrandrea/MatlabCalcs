@@ -1,4 +1,4 @@
-%matlab function that calculates a price in a specific experimental model
+%matlab function that calculates the fourier transform numerically for the pricing of a european plain vanilla option in a "certain model" 
 
 function [y1,y2]=My_Prob(S0,K,sigma0,T,r,b,eta,Lambda,rho,phi)
 x = log(S0);
@@ -23,8 +23,9 @@ C2=r*i*phi*T+delta/2*(((Q2+d2)/4)*T-2*log((1-exp(d2*T))/(1-g2*exp(d2*T))));
 %%%%%
 f1 = exp(C1 + D1*sigma0 + i*phi*x);
 y1 =  real(exp(-i*phi*log(K))*f1/(i*phi)); %no more @(phi) 
-% q1 = integral(y1,0.1,10000,'RelTol',0,'ArrayValued',true);
+q1 = integral(y1,0.1,10000,'RelTol',0,'ArrayValued',true);
 %%%%%
 f2=exp(C2 + D2*sigma0 + i*phi*x);
 y2=real(exp(-i*phi*log(K))*f2/(i*phi));
+q2 = integral(y2,0.1,10000,'RelTol',0,'ArrayValued',true);
 end
