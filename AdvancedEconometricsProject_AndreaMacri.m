@@ -1,7 +1,7 @@
 % We show some (interesting) properties of the Maximum Likelihood
 % Estimator.
-% The topic is the example of regression with normal errors (slides 258 -260 and 266-268).
-% Authors: Andrea Macri - Lieven Govaerts
+% The topic is the example of regression with normal errors.
+% Authors: Andrea Macri
 
 clear
 clf
